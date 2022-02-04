@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd6prrrajj8s0ch',
+        'USER': 'bcebwwjmbnqflx',
+        'PASSWORD': 'e4ccd546cf4a928cecf84e621f89f8ba8c4d4763c0bb5968f5f71b3982efdf1a',
+        'HOST': 'ec2-54-160-96-70.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -127,3 +131,4 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+django_heroku.settings(locals())
